@@ -1,0 +1,21 @@
+PASSO A PASSO PARA DEPLOY DE PROJETO LARAVEL EM AMBIENTE COMPARTILHADO (VIA TERMINAL CPANEL)
+
+
+
+
+# 1     => wget https://getcomposer.org/installer
+# 2     => php installer
+# 3     => rm -rf installer
+# 4     => git clone "link do seu projeto"
+# 5     => cd pastaProjeto
+# 5.1   => composer install
+# 6     => copy .env.example .env
+# 7     => php artisan key:generate
+# 7.1   => cd ../
+# 8     => mv public_html public_html_bkp
+# 9     => ln -s pastaProjeto/public public_html
+# 10    => cd pastaProjeto
+# 11    => find * -type d -exec chmod 755 {} \;
+# 11    => find * -type f -exec chmod 644 {} \;
+# 12    => cd../
+# 13    => chmod 755 pastaProjeto
